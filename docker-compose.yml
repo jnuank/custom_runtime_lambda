@@ -1,0 +1,8 @@
+version: '3'
+services:
+  lambda-with-c-compiler:
+    build: .
+    volumes:
+      - ./lib:/var/tmp
+    #結果帰ってこないんだ。
+    command: bash -c "cp /usr/bin/nkf /var/tmp/"
